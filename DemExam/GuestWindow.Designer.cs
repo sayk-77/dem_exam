@@ -40,9 +40,13 @@ namespace DemExam
             // 
             this.listProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.listProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.listProduct.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.listProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listProduct.GridColor = System.Drawing.SystemColors.Window;
             this.listProduct.Location = new System.Drawing.Point(4, 78);
             this.listProduct.Name = "listProduct";
+            this.listProduct.ReadOnly = true;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listProduct.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.listProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

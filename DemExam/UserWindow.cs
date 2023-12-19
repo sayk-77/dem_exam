@@ -41,7 +41,7 @@ namespace DemExam
                 listProduct.Columns.Add("О товаре", "О товаре");
                 listProduct.Columns.Add("Наличие на складе", "Наличие на складе");
                 listProduct.Columns["Артикул"].FillWeight = 1;
-                listProduct.Columns["О товаре"].FillWeight = 3;
+                listProduct.Columns["О товаре"].FillWeight = 4;
                 listProduct.Columns["Фото"].FillWeight = 2;
                 listProduct.Columns["Наличие на складе"].FillWeight = 1;
                 listProduct.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -282,6 +282,7 @@ namespace DemExam
         {
             try
             {
+                filterCategorys.Items.Clear();
                 resetSearch();
                 _db.OpenConnection();
                 
@@ -310,6 +311,11 @@ namespace DemExam
 
         private void searchProduct_TextChanged(object sender, EventArgs e)
         {
+            if (searchProduct.Text.Trim() == "")
+            {
+                LoadManufacturer();
+                return;
+            }
             string querySearch = searchProduct.Text;
             searchProducts(querySearch);
         }

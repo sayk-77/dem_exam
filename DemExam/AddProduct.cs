@@ -37,6 +37,13 @@ namespace DemExam
         {
             try
             {
+                if (productNameText.Text == "" || priceText.Text == "" || CategoryText.Text == "" || decriptionText.Text == "" ||
+                    ManufactyrerText.Text == "" || measureProduct.Text == "" || countProductText.Text == "" || articleProduct.Text == "")
+                {
+                    MessageBox.Show("Заполните все поля");
+                    return;
+                }
+                
                 string Name = productNameText.Text;
                 int Price = Int32.Parse(priceText.Text);
                 string Category = CategoryText.Text;
@@ -45,7 +52,7 @@ namespace DemExam
                 string Measure = measureProduct.Text;
                 int Count = Int32.Parse(countProductText.Text);
                 string Article = articleProduct.Text;
-
+                
                 if (pictureProduct.Image != null)
                 {
                     saveImage();
