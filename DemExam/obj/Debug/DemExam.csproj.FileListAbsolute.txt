@@ -53,3 +53,5 @@ C:\Users\yawai\RiderProjects\DemExam\DemExam\obj\Debug\DemExam.pdb
 C:\Users\yawai\RiderProjects\DemExam\DemExam\obj\Debug\DemExam.AdminWindow.resources
 C:\Users\yawai\RiderProjects\DemExam\DemExam\obj\Debug\DemExam.ChangeProduct.resources
 C:\Users\yawai\RiderProjects\DemExam\DemExam\obj\Debug\DemExam.AddProduct.resources
+C:\Users\yawai\RiderProjects\DemExam\DemExam\obj\Debug\DemExam.UserWindow.resources
+C:\Users\yawai\RiderProjects\DemExam\DemExam\obj\Debug\DemExam.GuestWindow.resources

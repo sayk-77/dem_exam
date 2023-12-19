@@ -59,18 +59,27 @@ namespace DemExam
         if (password == passwordUser)
         {
           MessageBox.Show("Успешная авторизация");
-          Hide();
-          AdminWindow aw = new AdminWindow(nameUser);
-          aw.ShowDialog();
+          if (reader["UserRole"].ToString() == "1")
+          {
+            AdminWindow aw = new AdminWindow(nameUser);
+            Hide();
+            aw.ShowDialog();
+            Show();
+          }
+          else
+          {
+            UserWindow uw = new UserWindow(nameUser);
+            Hide();
+            uw.ShowDialog();
+            Show();
+          }
         }
         else
         {
           MessageBox.Show("Не верный пароль");
           _loginAttempts++;
         }
-        Show();
       }
-      
       reader.Close();
       _db.CloseConnection();
     }
@@ -81,6 +90,14 @@ namespace DemExam
       formCaptcha.ShowDialog();
 
       return formCaptcha.GetCaptchaAccess();
+    }
+
+    private void btnLoginGuest_Click(object sender, EventArgs e)
+    {
+      GuestWindow gw = new GuestWindow();
+      Hide();
+      gw.ShowDialog();
+      Show();
     }
   }
 }

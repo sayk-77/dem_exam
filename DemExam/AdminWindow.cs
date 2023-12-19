@@ -291,6 +291,7 @@ namespace DemExam
             try
             {
                 resetSearch();
+                filterCategorys.Items.Clear();
                 _db.OpenConnection();
                 
                 DataTable tempTable = new DataTable();

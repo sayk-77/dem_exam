@@ -108,6 +108,7 @@
             this.btnLoginGuest.TabIndex = 3;
             this.btnLoginGuest.Text = "Войти как гость";
             this.btnLoginGuest.UseVisualStyleBackColor = true;
+            this.btnLoginGuest.Click += new System.EventHandler(this.btnLoginGuest_Click);
             // 
             // Authorization
             // 
